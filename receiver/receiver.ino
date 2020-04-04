@@ -34,7 +34,7 @@ long get_distance()
   // Convert the time into a distance
   mm = (duration) / 2.94;     // Divide by 29.1 or multiply by 0.0343
 
-  if ((mm< 1500))
+  if ((mm< 1500 && mm>100))
   {
     Serial.print(mm);
    Serial.println(" mm");
