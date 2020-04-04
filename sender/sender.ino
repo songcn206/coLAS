@@ -14,7 +14,7 @@ void loop() {
  
 
   get_distance();
-  delay(125);
+  delay(150);
 
 }
 
