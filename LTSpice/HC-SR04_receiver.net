@@ -1,0 +1,15 @@
+* C:\Users\shane\Documents\GitHub\coLAS\LTSpice\HC-SR04_receiver.asc
+XU1 N005 N001 VCC 0 N004 LM324
+V1 N002 0 SINE(0 .02 40000)
+R1 N003 N002 10k
+C1 N001 N003 10n
+R2 N004 N001 62k
+R3 N005 VCC 1k
+R4 0 N005 1k
+C2 N005 0 1µ2
+C3 N005 0 150n
+V2 VCC 0 5
+.lib LM324.ti.lib
+.tran 0.01
+.backanno
+.end
