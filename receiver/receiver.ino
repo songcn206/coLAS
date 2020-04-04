@@ -23,20 +23,22 @@ void loop() {
 long get_distance()
 {
 
-  static long duration, cm;
+  static unsigned long duration, mm;
  
  
   // Read the signal from the sensor: a HIGH pulse whose
   // duration is the time (in microseconds) from the sending
   // of the ping to the reception of its echo off of an object.
   duration = pulseIn(ECHO_PIN, HIGH);
- 
-  // Convert the time into a distance
-  cm = (duration) / 29.1;     // Divide by 29.1 or multiply by 0.0343
 
-  if(cm<200){
-    Serial.println(cm);
+  // Convert the time into a distance
+  mm = (duration) / 2.94;     // Divide by 29.1 or multiply by 0.0343
+
+  if ((mm< 1500))
+  {
+    Serial.print(mm);
+   Serial.println(" mm");
+   // Serial.println(duration);
   }
- 
   
 }
