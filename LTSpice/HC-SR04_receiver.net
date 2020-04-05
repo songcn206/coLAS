@@ -1,25 +1,27 @@
 * C:\Users\shane\Documents\GitHub\coLAS\LTSpice\HC-SR04_receiver.asc
-XU1 N008 N001 vcc 0 N002 LM324
-V1 N006 0 SINE(0 .1 40000)
+XU1 N007 N001 vcc 0 N002 LM324
 V2 vcc 0 5
-R1 N007 N006 10k
-C1 N001 N007 10n
+R1 N006 out 10k
+C1 N001 N006 10n
 R2 N002 N001 62k
-R3 N008 vcc 1k
-R4 0 N008 1k
-C2 N008 0 1µ2
-C3 N008 0 150n
+R3 N007 vcc 1k
+R4 0 N007 1k
+C2 N007 0 1µ2
+C3 N007 0 150n
 R5 N003 N002 2k2
-R6 N008 N003 1k
+R6 N007 N003 1k
 C4 N005 N003 1n
 C5 N004 N003 1n
 C6 N004 N005 12p
 R7 N004 N005 18k
-XU2 N008 N005 vcc 0 N004 LM324
-R8 0 N010 1k
-C7 N010 0 1µ
-D1 N009 N010 1N914
-C8 N009 N004 100µ
+XU2 N007 N005 vcc 0 N004 LM324
+R8 0 N009 1k
+C7 N009 0 100n
+D1 N008 N009 1N914
+C8 N008 N004 100µ
+V3 exp1 0 EXP(0 2 0 .0002 0.1m .0002)
+V4 sin1 0 SINE(0 .02 40000 0 0 0 8)
+B1 out 0 V=V(exp1)*V(sin1)
 .model D D
 .lib C:\Users\shane\Documents\LTspiceXVII\lib\cmp\standard.dio
 .lib LM324.ti.lib
@@ -28,5 +30,6 @@ C8 N009 N004 100µ
 .step param Rx list 1 2
 .param var2 table(Rx,1,18k,2,75k)
 .param var1 table(Rx,1,2k2,2,6k2)
+.function mod(x,y) { (x/y)-int(x/y) }
 .backanno
 .end
