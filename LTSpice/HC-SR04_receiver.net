@@ -1,6 +1,6 @@
 * C:\Users\shane\Documents\GitHub\coLAS\LTSpice\HC-SR04_receiver.asc
 XU1 N008 N001 vcc 0 N002 LM324
-V1 N006 0 AC .002
+V1 N006 0 SINE(0 .1 40000)
 V2 vcc 0 5
 R1 N007 N006 10k
 C1 N001 N007 10n
@@ -9,16 +9,22 @@ R3 N008 vcc 1k
 R4 0 N008 1k
 C2 N008 0 1µ2
 C3 N008 0 150n
-R5 N003 N002 {var1}
+R5 N003 N002 2k2
 R6 N008 N003 1k
 C4 N005 N003 1n
 C5 N004 N003 1n
 C6 N004 N005 12p
-R7 N004 N005 {var2}
+R7 N004 N005 18k
 XU2 N008 N005 vcc 0 N004 LM324
+R8 0 N010 1k
+C7 N010 0 1µ
+D1 N009 N010 1N914
+C8 N009 N004 100µ
+.model D D
+.lib C:\Users\shane\Documents\LTspiceXVII\lib\cmp\standard.dio
 .lib LM324.ti.lib
-.tran .01
-;ac dec 1001 10000 100000
+.tran .001
+;ac dec 1001 10000 80000
 .step param Rx list 1 2
 .param var2 table(Rx,1,18k,2,75k)
 .param var1 table(Rx,1,2k2,2,6k2)
