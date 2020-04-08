@@ -30,7 +30,7 @@ R13 0 N010 10k
 D1 N012 N013 D
 R8 N013 0 10k
 C7 N012 N007 .1µ
-C8 N013 0 .01µ
+C8 N013 0 .1µ
 .model D D
 .lib C:\Users\shane\Documents\LTspiceXVII\lib\cmp\standard.dio
 .lib LM324.ti.lib
