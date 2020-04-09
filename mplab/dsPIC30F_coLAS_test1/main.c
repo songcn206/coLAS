@@ -5,6 +5,7 @@
 #include <libpic30.h>
 #include <math.h>
 #include <p30F4011.h>
+#include "ADC.c"
 
  
  
@@ -25,14 +26,17 @@ void UART_Init ( void )
 int main( void )
 {
     UART_Init();
+    ADC_Init();
  
     while( 1 )
     {
          
- 
+        
          //To print text
-         printf("Greetings from Pakistan\r\n");
+         printf("val = %u\n\r", ADResult1);
+         
  
          __delay_ms(1000);
     }
 }
+

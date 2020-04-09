@@ -7,3 +7,10 @@ mplab/dsPIC30F_coLAS_test1/dist/default/production/dsPIC30F_coLAS_test1.producti
 mplab/dsPIC30F_coLAS_test1/nbproject/configurations.xml
 mplab/dsPIC30F_coLAS_test1/build/default/production/main.o
 mplab/CE002_ADC_1MSPS_010908.zip
+*.elf
+*.hex
+*.map
+*.xml
+mplab/dsPIC30F_coLAS_test1/dist/default/production/dsPIC30F_coLAS_test1.production.elf
+*.xml
+*.properties
