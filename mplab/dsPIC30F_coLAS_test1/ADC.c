@@ -67,7 +67,7 @@ void ADC_Init(void)
         //ADCON1 Register
         //Set up A/D for Automatic Sampling
         //Use internal counter (SAMC) to provide sampling time
-        //Set up A/D conversrion results to be read in integer
+        //Set up A/D conversrion results to be read in 1.15 fractional
         //number format.
         //Set up Sequential sampling for multiple S/H amplifiers
         //All other bits to their default state
