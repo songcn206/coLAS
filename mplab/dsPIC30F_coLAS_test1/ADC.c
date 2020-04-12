@@ -53,6 +53,10 @@
 unsigned int ADResult1 = 0;
 unsigned int ADResult2 = 0;
 
+extern int cnt;
+extern int *ptr;
+
+
 //Functions and Variables with Global Scope:
 void ADC_Init(void);
 void __attribute__((__interrupt__)) _ADCInterrupt(void);
@@ -67,7 +71,7 @@ void ADC_Init(void)
         //ADCON1 Register
         //Set up A/D for Automatic Sampling
         //Use internal counter (SAMC) to provide sampling time
-        //Set up A/D conversrion results to be read in 1.15 fractional
+        //Set up A/D conversrion results to be read in unsigned integer
         //number format.
         //Set up Sequential sampling for multiple S/H amplifiers
         //All other bits to their default state
@@ -82,22 +86,26 @@ void ADC_Init(void)
         //All other bits to their default state
         ADCON2bits.SMPI = 1;
         ADCON2bits.CHPS = 1;
-	//ADCON2bits.VCFG = 3; //Ideally use external references
+	    //ADCON2bits.VCFG = 0; //refs are Avdd and AVss
 
         //ADCON3 Register
         //We would like to set up a sampling rate of 1 MSPS
-        //Total Conversion Time= 1/Sampling Rate = 125 microseconds
+        //Total Conversion Time= 1/Sampling Rate = 1.25 microseconds
         //At 29.4 MIPS, Tcy = 33.9 ns = Instruction Cycle Time
         //The A/D converter will take 12*Tad periods to convert each sample
         //So for ~1 MSPS we need to have Tad close to 83.3ns
         //Using equaion in the Family Reference Manual we have
         //ADCS = 2*Tad/Tcy - 1
-        ADCON3bits.SAMC = 0;
-        ADCON3bits.ADCS = 4;
+        ADCON3bits.SAMC = 2;
+        ADCON3bits.ADCS = 9;
 
         //ADCHS Register
         //Set up A/D Channel Select Register to convert AN3 on Mux A input
         //of CH0 and CH1 S/H amplifiers
+       // ADCHSbits.CH0SA = 3;
+       // ADCHSbits.CH0SB = 3;
+        
+        
         ADCHS = 0x0023;
 
         //ADCSSL Register
@@ -119,7 +127,7 @@ void ADC_Init(void)
 
         //Turn on the A/D converter
         //This is typically done after configuring other registers
-        ADCON1bits.ADON = 1;
+        ADCON1bits.ADON = 0; //leave off for now
 
 }
 
@@ -128,8 +136,20 @@ void ADC_Init(void)
 //The ISR name is chosen from the device linker script.
 void __attribute__((interrupt, no_auto_psv)) _ADCInterrupt(void)
 {
-	ADResult1 = ADCBUF0;
-	ADResult2 = ADCBUF1;
+    _LATD2 = 1- _LATD2;
+	*ptr = ADCBUF0;
+	*(ptr+1) = ADCBUF1;
+   
+    
+   // ADResult1 = ADCBUF0;
+   // ADResult2 = ADCBUF1;
+    
+    ptr += 2;
+    cnt += 2; //two samples per interrupt
+    
+    if (cnt == (NUM_SAMPLES)){
+        IEC0bits.ADIE = 0;
+       }
 	
         //Clear the A/D Interrupt flag bit or else the CPU will
         //keep vectoring back to the ISR
