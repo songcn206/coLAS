@@ -21,17 +21,17 @@ R8 N007 0 10k
 C7 N006 N002 .1µ
 C8 N007 0 .01µ
 XU1 piezo_rx N011 vcc 0 N012 level.2 Avol=1Meg GBW=3Meg Slew=2.4Meg ilimit=7m rail=0 Vos=2m phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
-R2 N012 N011 50k
+R2 N012 N011 110k
 C1 N011 N015 100n
 XU4 N017 N013 vcc 0 N014 level.2 Avol=1Meg GBW=3Meg Slew=2.4Meg ilimit=7m rail=0 Vos=2m phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
 R3 N016 N014 3.9k
-R4 N014 N013 9k
-R5 0 N013 1k
+R4 N014 N013 10k
+R5 0 N013 100k
 R11 0 N017 3.9k
-C2 N017 N012 1n
 C3 N016 0 1n
 V1 ac_test 0 AC .01
 R12 N008 NC_01 2.2k
+C2 N017 N012 1n
 .model D D
 .lib C:\Users\shane\Documents\LTspiceXVII\lib\cmp\standard.dio
 .lib LM324.ti.lib
