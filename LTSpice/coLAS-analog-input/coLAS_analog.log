@@ -10,20 +10,21 @@ Direct Newton iteration for .op point succeeded.
 .step rx=1
 .step rx=2
 
-Date: Tue Apr 14 10:33:48 2020
-Total elapsed time: 0.385 seconds.
+Date: Tue Apr 14 16:06:57 2020
+Total elapsed time: 0.285 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 7824
-traniter = 7792
-tranpoints = 2716
-accept = 2066
-rejected = 650
-matrix size = 76
-fillins = 92
+totiter = 4238
+traniter = 4206
+tranpoints = 1738
+accept = 1367
+rejected = 371
+matrix size = 79
+fillins = 93
 solver = Normal
-Matrix Compiler1: 8.61 KB object code size  2.8/1.2/[0.6]
-Matrix Compiler2: off  [0.8]/1.2/1.1
+Thread vector: 11.8/10.4[2] 5.5/2.8[2] 3.1/2.0[2] 0.5/0.9[1]  2592/500
+Matrix Compiler1: 8.85 KB object code size  2.7/1.4/[0.9]
+Matrix Compiler2: 7.78 KB object code size  1.1/1.6/[0.7]
 

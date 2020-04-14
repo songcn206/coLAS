@@ -1,13 +1,13 @@
 * C:\Users\shane\Documents\GitHub\coLAS\LTSpice\coLAS-analog-input\coLAS_analog.asc
 V2 vcc 0 5
-R1 N015 0 10k
+R1 N017 0 10k
 C4 N010 N008 1n
 C5 N009 N008 1n
 C6 N009 N010 12p
 R7 N009 N010 18k
 XU2 0 N010 vcc 0 N009 LM324
-V3 exp1 0 EXP(0 2 0 .0001 0.1m .0001)
-V4 sin1 0 SINE(0 350m 40000 0 0 0 40)
+V3 exp1 0 EXP(0 2 0 100u .08m 100u)
+V4 sin1 0 SINE(0 20m 40000 0 0 0 160)
 B1 piezo_rx 0 V=V(exp1)*V(sin1)
 R9 N005 N004 10k
 C9 N001 N005 10n
@@ -22,16 +22,19 @@ C7 N006 N002 .1µ
 C8 N007 0 .01µ
 XU1 piezo_rx N011 vcc 0 N012 level.2 Avol=1Meg GBW=3Meg Slew=2.4Meg ilimit=7m rail=0 Vos=2m phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
 R2 N012 N011 110k
-C1 N011 N015 100n
-XU4 N017 N013 vcc 0 N014 level.2 Avol=1Meg GBW=3Meg Slew=2.4Meg ilimit=7m rail=0 Vos=2m phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
-R3 N016 N014 3.9k
-R4 N014 N013 10k
-R5 0 N013 100k
-R11 0 N017 3.9k
-C3 N016 0 1n
+C1 N011 N017 100n
+XU4 N019 N015 vcc 0 N016 level.2 Avol=1Meg GBW=3Meg Slew=2.4Meg ilimit=7m rail=0 Vos=2m phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+R3 N018 N016 3.9k
+R4 N016 N015 10k
+R5 0 N015 100k
+R11 0 N019 3.9k
+C3 N018 0 1n
 V1 ac_test 0 AC .01
 R12 N008 NC_01 2.2k
-C2 N017 N012 1n
+C2 N019 N012 1n
+XU5 N018 N013 vcc 0 N014 level.2 Avol=1Meg GBW=3Meg Slew=2.4Meg ilimit=7m rail=0 Vos=2m phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+R6 N013 0 10k
+R14 N014 N013 20k
 .model D D
 .lib C:\Users\shane\Documents\LTspiceXVII\lib\cmp\standard.dio
 .lib LM324.ti.lib
