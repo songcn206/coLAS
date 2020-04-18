@@ -47,9 +47,9 @@ Text Label 1450 5700 2    50   ~ 0
 PGC
 Text Label 5050 2750 2    50   ~ 0
 MCLR
-Text Label 6800 3350 0    50   ~ 0
+Text Label 5100 3250 2    50   ~ 0
 PGD
-Text Label 6800 3450 0    50   ~ 0
+Text Label 5100 3350 2    50   ~ 0
 PGC
 Text Label 5050 3950 2    50   ~ 0
 VDD
@@ -67,10 +67,6 @@ Wire Wire Line
 	5050 3950 5200 3950
 Wire Wire Line
 	6700 3950 6800 3950
-Wire Wire Line
-	6700 3450 6800 3450
-Wire Wire Line
-	6700 3350 6800 3350
 Wire Wire Line
 	6700 3150 6800 3150
 Wire Wire Line
@@ -415,12 +411,12 @@ $EndComp
 $Comp
 L Regulator_Linear:LM1117-3.3 U?
 U 1 1 5E9D8507
-P 9750 3100
-F 0 "U?" H 9750 3342 50  0000 C CNN
-F 1 "LM1117-3.3" H 9750 3251 50  0000 C CNN
-F 2 "" H 9750 3100 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm1117.pdf" H 9750 3100 50  0001 C CNN
-	1    9750 3100
+P 9750 2500
+F 0 "U?" H 9750 2742 50  0000 C CNN
+F 1 "LM1117-3.3" H 9750 2651 50  0000 C CNN
+F 2 "" H 9750 2500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm1117.pdf" H 9750 2500 50  0001 C CNN
+	1    9750 2500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -462,4 +458,113 @@ F 3 "" H 9700 4800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9700 4650 9700 4800
+Text Label 10100 4250 0    50   ~ 0
+D+
+Text Label 10100 4350 0    50   ~ 0
+D-
+Wire Wire Line
+	10000 4250 10100 4250
+Wire Wire Line
+	10000 4350 10100 4350
+$Comp
+L power:GND #PWR?
+U 1 1 5EA22415
+P 9750 3000
+F 0 "#PWR?" H 9750 2750 50  0001 C CNN
+F 1 "GND" H 9755 2827 50  0000 C CNN
+F 2 "" H 9750 3000 50  0001 C CNN
+F 3 "" H 9750 3000 50  0001 C CNN
+	1    9750 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9750 2800 9750 2900
+$Comp
+L power:+5V #PWR?
+U 1 1 5EA23B8F
+P 9100 2400
+F 0 "#PWR?" H 9100 2250 50  0001 C CNN
+F 1 "+5V" H 9115 2573 50  0000 C CNN
+F 2 "" H 9100 2400 50  0001 C CNN
+F 3 "" H 9100 2400 50  0001 C CNN
+	1    9100 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9100 2400 9100 2500
+Wire Wire Line
+	9100 2500 9250 2500
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5EA25532
+P 10400 2350
+F 0 "#PWR?" H 10400 2200 50  0001 C CNN
+F 1 "+3.3V" H 10415 2523 50  0000 C CNN
+F 2 "" H 10400 2350 50  0001 C CNN
+F 3 "" H 10400 2350 50  0001 C CNN
+	1    10400 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 2500 10250 2500
+Wire Wire Line
+	10400 2500 10400 2350
+$Comp
+L Device:C C?
+U 1 1 5EA29440
+P 9250 2750
+F 0 "C?" H 9365 2796 50  0000 L CNN
+F 1 ".1uF" H 9365 2705 50  0000 L CNN
+F 2 "" H 9288 2600 50  0001 C CNN
+F 3 "~" H 9250 2750 50  0001 C CNN
+	1    9250 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5EA298B3
+P 10250 2750
+F 0 "C?" H 10365 2796 50  0000 L CNN
+F 1 "1uF" H 10365 2705 50  0000 L CNN
+F 2 "" H 10288 2600 50  0001 C CNN
+F 3 "~" H 10250 2750 50  0001 C CNN
+	1    10250 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9250 2500 9250 2600
+Connection ~ 9250 2500
+Wire Wire Line
+	9250 2500 9450 2500
+Wire Wire Line
+	9250 2900 9750 2900
+Connection ~ 9750 2900
+Wire Wire Line
+	9750 2900 9750 3000
+Wire Wire Line
+	10250 2500 10250 2600
+Connection ~ 10250 2500
+Wire Wire Line
+	10250 2500 10400 2500
+Wire Wire Line
+	10250 2900 9750 2900
+Wire Wire Line
+	5100 3250 5200 3250
+Wire Wire Line
+	5100 3350 5200 3350
+$Comp
+L power:+5V #PWR?
+U 1 1 5EA36903
+P 6850 2650
+F 0 "#PWR?" H 6850 2500 50  0001 C CNN
+F 1 "+5V" H 6865 2823 50  0000 C CNN
+F 2 "" H 6850 2650 50  0001 C CNN
+F 3 "" H 6850 2650 50  0001 C CNN
+	1    6850 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 2750 6850 2750
+Wire Wire Line
+	6850 2750 6850 2650
 $EndSCHEMATC
