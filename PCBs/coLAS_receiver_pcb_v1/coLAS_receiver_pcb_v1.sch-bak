@@ -400,12 +400,12 @@ Wire Wire Line
 $Comp
 L Amplifier_Operational:TSV914 U?
 U 5 1 5E9D07ED
-P 7500 1600
-F 0 "U?" H 7458 1646 50  0000 L CNN
-F 1 "TSV914" H 7458 1555 50  0000 L CNN
-F 2 "" H 7450 1700 50  0001 C CNN
-F 3 "www.st.com/resource/en/datasheet/tsv911.pdf" H 7550 1800 50  0001 C CNN
-	5    7500 1600
+P 9100 1250
+F 0 "U?" H 9058 1296 50  0000 L CNN
+F 1 "TSV914" H 9058 1205 50  0000 L CNN
+F 2 "" H 9050 1350 50  0001 C CNN
+F 3 "www.st.com/resource/en/datasheet/tsv911.pdf" H 9150 1450 50  0001 C CNN
+	5    9100 1250
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -567,4 +567,162 @@ Wire Wire Line
 	6700 2750 6850 2750
 Wire Wire Line
 	6850 2750 6850 2650
+$Comp
+L Amplifier_Operational:TSV914 U?
+U 4 1 5E9B4BF7
+P 7650 1450
+F 0 "U?" H 7650 1083 50  0000 C CNN
+F 1 "TSV914" H 7650 1174 50  0000 C CNN
+F 2 "" H 7600 1550 50  0001 C CNN
+F 3 "www.st.com/resource/en/datasheet/tsv911.pdf" H 7700 1650 50  0001 C CNN
+	4    7650 1450
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6500 1550 7350 1550
+Connection ~ 6500 1550
+$Comp
+L Device:R_Small R?
+U 1 1 5E9D0AB4
+P 7400 950
+F 0 "R?" V 7204 950 50  0000 C CNN
+F 1 "1Meg" V 7295 950 50  0000 C CNN
+F 2 "" H 7400 950 50  0001 C CNN
+F 3 "~" H 7400 950 50  0001 C CNN
+	1    7400 950 
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5E9D233F
+P 7050 950
+F 0 "R?" V 6854 950 50  0000 C CNN
+F 1 "15k" V 6945 950 50  0000 C CNN
+F 2 "" H 7050 950 50  0001 C CNN
+F 3 "~" H 7050 950 50  0001 C CNN
+	1    7050 950 
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E9D26D4
+P 6800 1000
+F 0 "#PWR?" H 6800 750 50  0001 C CNN
+F 1 "GND" H 6805 827 50  0000 C CNN
+F 2 "" H 6800 1000 50  0001 C CNN
+F 3 "" H 6800 1000 50  0001 C CNN
+	1    6800 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 1000 6800 950 
+Wire Wire Line
+	6800 950  6950 950 
+Wire Wire Line
+	7150 950  7250 950 
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E9D6545
+P 7700 900
+F 0 "#PWR?" H 7700 750 50  0001 C CNN
+F 1 "+3.3V" H 7715 1073 50  0000 C CNN
+F 2 "" H 7700 900 50  0001 C CNN
+F 3 "" H 7700 900 50  0001 C CNN
+	1    7700 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 950  7700 950 
+Wire Wire Line
+	7700 950  7700 900 
+Wire Wire Line
+	7250 950  7250 1350
+Wire Wire Line
+	7250 1350 7350 1350
+Connection ~ 7250 950 
+Wire Wire Line
+	7250 950  7300 950 
+Text Label 8200 1450 0    50   ~ 0
+INT0
+Wire Wire Line
+	7950 1450 8200 1450
+Text Label 6800 2850 0    50   ~ 0
+INT0
+Wire Wire Line
+	6700 2850 6800 2850
+$Comp
+L power:GND #PWR?
+U 1 1 5E9F2463
+P 9000 1650
+F 0 "#PWR?" H 9000 1400 50  0001 C CNN
+F 1 "GND" H 9005 1477 50  0000 C CNN
+F 2 "" H 9000 1650 50  0001 C CNN
+F 3 "" H 9000 1650 50  0001 C CNN
+	1    9000 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E9F2A48
+P 9000 850
+F 0 "#PWR?" H 9000 700 50  0001 C CNN
+F 1 "+3.3V" H 9015 1023 50  0000 C CNN
+F 2 "" H 9000 850 50  0001 C CNN
+F 3 "" H 9000 850 50  0001 C CNN
+	1    9000 850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 1650 9000 1550
+Wire Wire Line
+	9000 850  9000 950 
+Text Label 5050 4050 2    50   ~ 0
+U2_RX
+Wire Wire Line
+	5050 4050 5200 4050
+$Comp
+L Kicad_symbols:TSOP6238TT U?
+U 1 1 5EA0D464
+P 1850 3500
+F 0 "U?" H 1888 3925 50  0000 C CNN
+F 1 "TSOP6238TT" H 1888 3834 50  0000 C CNN
+F 2 "" H 1850 3500 50  0001 C CNN
+F 3 "" H 1850 3500 50  0001 C CNN
+	1    1850 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5EA1248E
+P 2450 3200
+F 0 "#PWR?" H 2450 3050 50  0001 C CNN
+F 1 "+3.3V" H 2465 3373 50  0000 C CNN
+F 2 "" H 2450 3200 50  0001 C CNN
+F 3 "" H 2450 3200 50  0001 C CNN
+	1    2450 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EA12DBD
+P 2450 3750
+F 0 "#PWR?" H 2450 3500 50  0001 C CNN
+F 1 "GND" H 2455 3577 50  0000 C CNN
+F 2 "" H 2450 3750 50  0001 C CNN
+F 3 "" H 2450 3750 50  0001 C CNN
+	1    2450 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 3300 2450 3300
+Wire Wire Line
+	2450 3300 2450 3200
+Wire Wire Line
+	2300 3700 2450 3700
+Wire Wire Line
+	2450 3700 2450 3750
+Text Label 2450 3500 0    50   ~ 0
+U2_RX
+Wire Wire Line
+	2300 3500 2450 3500
 $EndSCHEMATC
