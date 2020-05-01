@@ -1,0 +1,4 @@
+
+(fp_lib_table
+  (lib (name "Ir_addon_v2")(type KiCad)(uri "$(KIPRJMOD)/Ir_addon_v2.pretty")(options "")(descr ""))
+)

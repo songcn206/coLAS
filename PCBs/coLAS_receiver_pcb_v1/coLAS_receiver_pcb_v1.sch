@@ -85,7 +85,7 @@ U 1 1 5E971669
 P 2850 1750
 F 0 "U3" H 2850 2117 50  0000 C CNN
 F 1 "TSV914" H 2850 2026 50  0000 C CNN
-F 2 "" H 2800 1850 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2800 1850 50  0001 C CNN
 F 3 "www.st.com/resource/en/datasheet/tsv911.pdf" H 2900 1950 50  0001 C CNN
 	1    2850 1750
 	1    0    0    1   
@@ -96,7 +96,7 @@ U 2 1 5E976E00
 P 4400 1650
 F 0 "U3" H 4400 2017 50  0000 C CNN
 F 1 "TSV914" H 4400 1926 50  0000 C CNN
-F 2 "" H 4350 1750 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4350 1750 50  0001 C CNN
 F 3 "www.st.com/resource/en/datasheet/tsv911.pdf" H 4450 1850 50  0001 C CNN
 	2    4400 1650
 	1    0    0    1   
@@ -107,7 +107,7 @@ U 3 1 5E978039
 P 6050 1550
 F 0 "U3" H 6050 1917 50  0000 C CNN
 F 1 "TSV914" H 6050 1826 50  0000 C CNN
-F 2 "" H 6000 1650 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6000 1650 50  0001 C CNN
 F 3 "www.st.com/resource/en/datasheet/tsv911.pdf" H 6100 1750 50  0001 C CNN
 	3    6050 1550
 	1    0    0    1   
@@ -118,7 +118,7 @@ U 1 1 5E97938F
 P 1950 2250
 F 0 "LS1" H 2124 2246 50  0000 L CNN
 F 1 "Speaker_Ultrasound" H 2124 2155 50  0000 L CNN
-F 2 "" H 1915 2200 50  0001 C CNN
+F 2 "kicad_footprints:Multicomp_ultrasonic_transceiver" H 1915 2200 50  0001 C CNN
 F 3 "~" H 1915 2200 50  0001 C CNN
 	1    1950 2250
 	-1   0    0    1   
@@ -403,7 +403,7 @@ U 5 1 5E9D07ED
 P 9100 1250
 F 0 "U3" H 9058 1296 50  0000 L CNN
 F 1 "TSV914" H 9058 1205 50  0000 L CNN
-F 2 "" H 9050 1350 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 9050 1350 50  0001 C CNN
 F 3 "www.st.com/resource/en/datasheet/tsv911.pdf" H 9150 1450 50  0001 C CNN
 	5    9100 1250
 	1    0    0    -1  
@@ -573,7 +573,7 @@ U 4 1 5E9B4BF7
 P 7650 1450
 F 0 "U3" H 7650 1083 50  0000 C CNN
 F 1 "TSV914" H 7650 1174 50  0000 C CNN
-F 2 "" H 7600 1550 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7600 1550 50  0001 C CNN
 F 3 "www.st.com/resource/en/datasheet/tsv911.pdf" H 7700 1650 50  0001 C CNN
 	4    7650 1450
 	1    0    0    1   
@@ -686,7 +686,7 @@ U 1 1 5EA0D464
 P 1850 3500
 F 0 "U2" H 1888 3925 50  0000 C CNN
 F 1 "TSOP6238TT" H 1888 3834 50  0000 C CNN
-F 2 "" H 1850 3500 50  0001 C CNN
+F 2 "kicad_footprints:TSOP6238TT _IR_Receiver" H 1850 3500 50  0001 C CNN
 F 3 "" H 1850 3500 50  0001 C CNN
 	1    1850 3500
 	1    0    0    -1  
